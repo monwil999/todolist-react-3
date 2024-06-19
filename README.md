@@ -1,12 +1,12 @@
 # Simple To Do List for Everyone
 
-## Introduction
-
-**Simple list that will help you with your daily duties.**
-
 
 ## Demo
 [ https://monwil999.github.io/todolist-refactoring/](https://monwil999.github.io/todolist-react/)
+
+## Introduction
+
+**Simple list that will help you with your daily duties.**
 
 
 ![Todolist](todolistreact.png)
