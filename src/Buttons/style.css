@@ -1,0 +1,31 @@
+.section__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .section__buttons {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+}
+
+.section__button--header {
+    color: teal;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    padding: 20px;
+    transition: 1s;
+}
+
+.section__button--header:hover {
+    color: hsl(180, 100%, 40%);
+    cursor: pointer;
+}
+
+.section__button--hiddenAllDone:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
