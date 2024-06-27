@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 
-.section__button--hiddenAllDone:disabled {
+.section__button--header:disabled {
     color: #ccc;
-    cursor: not-allowed;
+    background-color: transparent;
 }
