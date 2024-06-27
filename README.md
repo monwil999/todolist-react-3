@@ -2,7 +2,7 @@
 
 
 ## Demo
-[(https://monwil999.github.io/todolist-react/)]
+(https://monwil999.github.io/todolist-react/)
 
 ## Introduction
 
