@@ -1,21 +1,30 @@
 import "./style.css";
 
-const Tasks = ({tasks, hideDoneTasks}) => (
+const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
   <ul className="tasks">
     {tasks.map((task) => (
       <li
         key={task.id} // Dodano klucz, aby React mógł efektywnie śledzić elementy listy
         className={`tasks__item ${
-          task.done && hideDoneTasks ? "tasks__item--hidden" : ""
+          task.done && hideDone ? "tasks__item--hidden" : ""
         }`}
       >
-        <button className="tasks__button tasks__button--toggleDone">
+        <button className="tasks__button tasks__button--toggleDone"
+        onClick={() => toggleTaskDone(task.id)}
+        >
           {task.done ? "✓" : ""}
         </button>
-        <span className={`tasks__content${task.done ? " tasks__content--done" : ""}`}>
+        <span
+          className={`tasks__content${
+            task.done ? " tasks__content--done" : ""
+          }`}
+        >
           {task.content}
         </span>
-        <button className="tasks__button tasks__button--remove">
+        <button
+          className="tasks__button tasks__button--remove"
+          onClick={() => removeTask(task.id)}
+        >
           🗑️
         </button>
       </li>
