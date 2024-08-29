@@ -7,23 +7,25 @@ const Form = ({ addNewTask }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        // Usunięcie białych znaków z początku i końca wartości wprowadzonej przez użytkownika
+        // Logowanie wartości pola tekstowego przed użyciem trim()
+        console.log("Oryginalna wartość zadania:", newTaskContent);
+        
+        // Usunięcie białych znaków
         const trimmedNewTaskContent = newTaskContent.trim();
         
-        // Logowanie do konsoli dla debugowania
-        console.log("Oryginalna wartość zadania:", newTaskContent);
+        // Logowanie wartości po użyciu trim()
         console.log("Wartość zadania po trim():", trimmedNewTaskContent);
 
-        // Sprawdzenie, czy zadanie po trim() nie jest puste
+        // Sprawdzenie, czy zadanie jest puste po trim()
         if (trimmedNewTaskContent.length === 0) {
             console.log("Puste zadanie, nie dodano.");
-            return; // Zakończenie działania funkcji, jeśli zadanie jest puste
+            return; // Przerwij funkcję, jeśli zadanie jest puste
         }
 
-        // Dodanie zadania, jeśli nie jest puste
+        // Dodanie nowego zadania i czyszczenie pola tekstowego
         addNewTask(trimmedNewTaskContent);
+        console.log("Dodano zadanie:", trimmedNewTaskContent);
         
-        // Resetowanie pola tekstowego po dodaniu zadania
         setNewTaskContent("");
     };
 
@@ -35,9 +37,10 @@ const Form = ({ addNewTask }) => {
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
-            <button className="form__button">Dodaj zadanie</button>
+            <button className="form__button" type="submit">Dodaj zadanie</button>
         </form>
     );
 };
 
 export default Form;
+
