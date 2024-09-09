@@ -7,22 +7,19 @@ const Form = ({ addNewTask }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        // Logowanie wartości pola tekstowego przed użyciem trim()
+
         console.log("Oryginalna wartość zadania:", newTaskContent);
         
-        // Usunięcie białych znaków
+        
         const trimmedNewTaskContent = newTaskContent.trim();
         
-        // Logowanie wartości po użyciu trim()
-        console.log("Wartość zadania po trim():", trimmedNewTaskContent);
+       
+     trimmedNewTaskContent);
 
-        // Sprawdzenie, czy zadanie jest puste po trim()
+     
         if (trimmedNewTaskContent.length === 0) {
-            console.log("Puste zadanie, nie dodano.");
-            return; // Przerwij funkcję, jeśli zadanie jest puste
+            return;
         }
-
-        // Dodanie nowego zadania i czyszczenie pola tekstowego
         addNewTask(trimmedNewTaskContent);
         console.log("Dodano zadanie:", trimmedNewTaskContent);
         
