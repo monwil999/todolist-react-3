@@ -7,27 +7,18 @@ const Form = ({ addNewTask }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-
-        console.log("Oryginalna wartość zadania:", newTaskContent);
-        
-        
         const trimmedNewTaskContent = newTaskContent.trim();
         
-       
-     trimmedNewTaskContent);
-
-     
         if (trimmedNewTaskContent.length === 0) {
             return;
         }
+
         addNewTask(trimmedNewTaskContent);
-        console.log("Dodano zadanie:", trimmedNewTaskContent);
-        
         setNewTaskContent("");
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}> 
+        <form className="form" onSubmit={onFormSubmit}>
             <input
                 value={newTaskContent}
                 className="form__input"
@@ -40,4 +31,3 @@ const Form = ({ addNewTask }) => {
 };
 
 export default Form;
-
