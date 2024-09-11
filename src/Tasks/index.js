@@ -4,13 +4,14 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
   <ul className="tasks">
     {tasks.map((task) => (
       <li
-        key={task.id} // Dodano klucz, aby React mógł efektywnie śledzić elementy listy
+        key={task.id}
         className={`tasks__item ${
           task.done && hideDone ? "tasks__item--hidden" : ""
         }`}
       >
-        <button className="tasks__button tasks__button--toggleDone"
-        onClick={() => toggleTaskDone(task.id)}
+        <button
+          className="tasks__button tasks__button--toggleDone"
+          onClick={() => toggleTaskDone(task.id)}
         >
           {task.done ? "✓" : ""}
         </button>
@@ -19,7 +20,7 @@ const Tasks = ({ tasks, hideDone, removeTask, toggleTaskDone }) => (
             task.done ? " tasks__content--done" : ""
           }`}
         >
-          {task.id} - {task.content} 
+          {task.id} - {task.content}
         </span>
         <button
           className="tasks__button tasks__button--remove"
