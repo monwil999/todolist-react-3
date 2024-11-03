@@ -1,4 +1,4 @@
-import { StyledContainer } from "./styled"; 
+import { StyledContainer } from "./styled.js"; 
 
 const Container = ({ children }) => (
   <StyledContainer>

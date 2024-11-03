@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
     display: flex;
@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
 export const Button = styled.button`
     @media (max-width: 767px) {
         flex-basis: 100%;
-        margin: 10px;
     }
 
     color: teal;
@@ -17,6 +16,10 @@ export const Button = styled.button`
     background-color: white;
     font-size: 18px;
     padding: 20px;
+    margin: 10px; /* Zmiana marginesu dla lepszego wyglądu */
     transition: 1s;
-`;
 
+    &:hover {
+        background-color: hsl(180, 100%, 90%); /* Przyklad efektu hover */
+    }
+`;

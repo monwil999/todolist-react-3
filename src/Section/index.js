@@ -1,15 +1,15 @@
-import { Title, StyledSection } from "./styled";
+import { Sectionstyle, Layout, Header, Body } from "./styled.js";
 
-const Section = ({ title, bodyContent, extraHeaderContent, toggleHideDone }) => (
-    <StyledSection>
-        <Title>
-            {title}
-        </Title>
-        {extraHeaderContent}
-        <div>
-            {bodyContent}
-        </div>
-    </StyledSection>
+const Section = ({ title, body, extraHeaderContent }) => (
+  <Sectionstyle>
+    <Layout>
+      <Header>{title}</Header>
+      {extraHeaderContent}
+    </Layout>
+    <Body>
+      {body}
+    </Body>
+  </Sectionstyle>
 );
 
 export default Section;

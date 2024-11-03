@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-
 export const List = styled.ul`
     list-style: none;
     margin: 0;
@@ -15,13 +14,13 @@ export const Item = styled.li`
     padding: 10px;
     border-bottom: 1px solid #ddd;
 
-    ${({hidden}) => hidden && css`
+    ${({ hidden }) => hidden && css`
         display: none;
     `}
 `;
 
-export const Content =  styled.span`
-    ${({done}) => done && css` 
+export const Content = styled.span`
+    ${({ done }) => done && css` 
         text-decoration: line-through;
     `}
 `;
@@ -31,25 +30,21 @@ export const Button = styled.button`
     color: white;
     width: 30px;
     height: 30px;
-    padding: 0px;
+    padding: 0;
 
-    ${({toggleDone}) => toggleDone && css`
+    ${({ toggleDone }) => toggleDone && css`
         background: green;
 
         &:hover {
             background: lightgreen;
         }
     `}
-    ;
 
-    ${({remove})  => remove && css`
+    ${({ remove }) => remove && css`
         background: red;
 
         &:hover {
-            background:  rgb(193, 89, 89);
+            background: rgb(193, 89, 89);
         }
     `}
 `;
-
-
-

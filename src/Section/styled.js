@@ -1,27 +1,29 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const Title = styled.h1`
-    margin: 0;
-    font-size: 20px;
+export const Sectionstyle = styled.section`
+  background-color: white;
+  margin: 15px;
 `;
 
-export const StyledSection = styled.section`
-    margin: 10px 0;
-    background: white;
-    box-shadow: 0 0 5px #ddd;
+export const Layout = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+  margin: 15px;
 
-    ${({ body }) => body && css`
-        padding: 20px;
-    `}
+  @media (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+`;
 
-    ${({ header }) => header && css`
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-gap: 15px;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        border-bottom: 1px solid #eee;
-        grid-template-columns: 1fr;
-    `}
+export const Header = styled.h2`
+  font-size: 30px;
+  padding: 20px;
+  margin: 0;
+`;
+
+export const Body = styled.div`
+  padding: 20px;
 `;
