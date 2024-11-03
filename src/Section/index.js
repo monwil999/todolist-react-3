@@ -1,18 +1,17 @@
-import "./style.css"; 
+import { Title, StyledSection } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent, toggleHideDone }) => (
-    <section className="section">
-    <header
-    className="section__header">
-      <h2 
-      onlick={toggleHideDone}
-      className="section__title">{title}</h2>
-     {extraHeaderContent}
-    </header>
-    <div className="section__body">
-  {body}
-    </div>
-  </section>
+    <StyledSection header={toggleHideDone}>
+        <header className="section__header">
+            <Title>
+                {title}
+            </Title>
+            {extraHeaderContent}
+        </header>
+        <div className="section__body">
+            {body}
+        </div>
+    </StyledSection>
 );
 
 export default Section;

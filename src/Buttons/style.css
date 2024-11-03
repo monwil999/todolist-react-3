@@ -11,21 +11,3 @@
     }
 }
 
-.section__button--header {
-    color: teal;
-    border: none;
-    background-color: white;
-    font-size: 18px;
-    padding: 20px;
-    transition: 1s;
-}
-
-.section__button--header:hover {
-    color: hsl(180, 100%, 40%);
-    cursor: pointer;
-}
-
-.section__button--header:disabled {
-    color: #ccc;
-    background-color: transparent;
-}

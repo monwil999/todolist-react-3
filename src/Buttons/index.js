@@ -1,15 +1,14 @@
-import React from "react";
-import "./style.css";
+import ButtonStyled from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
-  <div className="buttons">
+  <ButtonStyled>
     {tasks.length > 0 && (
       <>
         <button onClick={toggleHideDone} className="section__button--header">
           {hideDone ? "Pokaż ukończone" : "Ukryj ukończone"}
         </button>
         <button
-        onClick={setAllDone}
+          onClick={setAllDone}
           className="section__button--header"
           disabled={tasks.every(({ done }) => done)}
         >
@@ -17,7 +16,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
         </button>
       </>
     )}
-  </div>
+  </ButtonStyled>
 );
 
 export default Buttons;
