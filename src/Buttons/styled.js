@@ -1,23 +1,22 @@
 import styled, { css } from "styled-components";
 
-const ButtonsStyled = styled.button`
+export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+`;
 
+export const Button = styled.button`
     @media (max-width: 767px) {
         flex-basis: 100%;
         margin: 10px;
     }
 
-    ${({ header }) => header && css`
-        color: teal;
-        border: none;
-        background-color: white;
-        font-size: 18px;
-        padding: 20px;
-        transition: 1s;
-    `};
+    color: teal;
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    padding: 20px;
+    transition: 1s;
 `;
 
-export default ButtonsStyled;
