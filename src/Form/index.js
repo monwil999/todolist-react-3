@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FormStyled, Input, Button } from "./styled.js"; 
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null); // Deklaracja inputRef
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -10,19 +11,20 @@ const Form = ({ addNewTask }) => {
         const trimmedNewTaskContent = newTaskContent.trim();
         
         if (trimmedNewTaskContent.length === 0) {
-            // Tutaj można dodać komunikat informujący o błędzie
             return;
         }
 
         addNewTask(trimmedNewTaskContent);
         setNewTaskContent("");
+        inputRef.current.focus(); 
     };
 
     return (
         <FormStyled onSubmit={onFormSubmit}>
-            <Input
+            <Input 
+                ref={inputRef} 
                 placeholder="Co jest do zrobienia?"
-                value={newTaskContent} // Dodano przypisanie wartości
+                value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
             />
             <Button type="submit">Dodaj zadanie</Button>
