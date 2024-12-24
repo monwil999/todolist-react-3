@@ -1,4 +1,5 @@
 import { Sectionstyle, Layout, Header, Body } from "./styled.js";
+import React from 'react';
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Sectionstyle>

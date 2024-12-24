@@ -1,4 +1,5 @@
 import { Wrapper, Button } from "./styled.js";
+import React from 'react';
 
 const ButtonComponent = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
   <Wrapper>
