@@ -2,7 +2,7 @@
 
 
 ## Demo
-[(https://monwil999.github.io/todolist-react-3/)](https://monwil999.github.io/todolist-react-3/)
+[Click here to try](https://monwil999.github.io/todolist-react-3/)
 
 ## Introduction
 
@@ -15,10 +15,11 @@
 
 1. HTML
 1. CSS
-1. Alternative Box Model
-1. JS
-1. BEM
-1. ES6+
+1. React
+1. Redux
+1. Java Script (ES6+)
+1. Styled-components
+1. Create React App
 
 
 ## Available Scripts
