@@ -1,5 +1,5 @@
 import { Sectionstyle, Layout, Header, Body } from "./styled.js";
-import React from 'react';
+import React from "react";
 
 const Section = ({ title, body, extraHeaderContent }) => (
   <Sectionstyle>
@@ -7,9 +7,7 @@ const Section = ({ title, body, extraHeaderContent }) => (
       <Header>{title}</Header>
       {extraHeaderContent}
     </Layout>
-    <Body>
-      {body}
-    </Body>
+    <Body>{body}</Body>
   </Sectionstyle>
 );
 

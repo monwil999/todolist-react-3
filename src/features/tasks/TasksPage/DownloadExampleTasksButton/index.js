@@ -5,23 +5,20 @@ import { fetchExampleTasks, selectLoading } from "../../tasksSlice.js";
 
 const DownloadTasksButton = () => {
   const dispatch = useDispatch();
-  const globalLoading = useSelector(selectLoading); // Pobieramy stan loading z Redux
-  const [localLoading, setLocalLoading] = useState(false); // Lokalny stan dla opóźnienia
+  const globalLoading = useSelector(selectLoading);
+  const [localLoading, setLocalLoading] = useState(false);
 
   const handleFetchTasks = () => {
-    setLocalLoading(true); 
+    setLocalLoading(true);
     dispatch(fetchExampleTasks());
-    setTimeout(() => setLocalLoading(false), 1000); 
+    setTimeout(() => setLocalLoading(false), 1000);
   };
 
-  const isLoading = globalLoading || localLoading; 
+  const isLoading = globalLoading || localLoading;
 
   return (
     <Wrapper>
-      <Button
-        onClick={handleFetchTasks}
-        disabled={isLoading}
-      >
+      <Button onClick={handleFetchTasks} disabled={isLoading}>
         {isLoading ? "Ładowanie..." : "Pobierz przykładowe zadania"}
       </Button>
     </Wrapper>

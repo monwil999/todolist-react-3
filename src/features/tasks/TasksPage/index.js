@@ -3,12 +3,11 @@ import Buttons from "../TasksPage/Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
-import TaskList from './TaskList'; // Upewnij się, że TaskList jest poprawnie zaimportowany
+import TaskList from "./TaskList";
 import DownloadExampleTasksButton from "./DownloadExampleTasksButton";
 import Search from "././Search";
 
 function TasksPage() {
-  
   return (
     <Container>
       <Header title="Lista zadań" />
@@ -17,17 +16,14 @@ function TasksPage() {
         extraHeaderContent={<DownloadExampleTasksButton />}
         body={<Form />}
       />
-        <Section
-        title="Wyszukiwarka"
-        body={<Search />}
-      />
+      <Section title="Wyszukiwarka" body={<Search />} />
       <Section
         title="Lista zadań"
-        body={<TaskList />} // TaskList w body
+        body={<TaskList />}
         extraHeaderContent={<Buttons />}
       />
     </Container>
   );
 }
 
-export default TasksPage; // Poprawiona nazwa eksportu
+export default TasksPage;

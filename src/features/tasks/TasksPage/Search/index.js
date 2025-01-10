@@ -1,26 +1,25 @@
-// Search/index.js
 import React from "react";
-import { useQueryParameter, useReplaceQueryParameter } from "./queryParameters"; // Poprawiony import
+import { useQueryParameter, useReplaceQueryParameter } from "./queryParameters";
 import Input from "../../Input";
 import { Wrapper } from "./styled";
 
 const Search = () => {
-    const [query, setQuery] = useQueryParameter("szukaj"); // użycie useQueryParameter
-    const [replaceQuery, setReplaceQuery] = useReplaceQueryParameter("szukaj"); // użycie useReplaceQueryParameter
+  const [query, setQuery] = useQueryParameter("szukaj");
+  const [replaceQuery, setReplaceQuery] = useReplaceQueryParameter("szukaj");
 
-    const handleChange = (e) => {
-        setQuery(e.target.value); // Ustawienie nowego zapytania
-    };
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+  };
 
-    return (
-        <Wrapper>
-            <Input
-                placeholder="Filtruj zadania"
-                value={query || ""}
-                onChange={handleChange}
-            />
-        </Wrapper>
-    );
+  return (
+    <Wrapper>
+      <Input
+        placeholder="Filtruj zadania"
+        value={query || ""}
+        onChange={handleChange}
+      />
+    </Wrapper>
+  );
 };
 
 export default Search;

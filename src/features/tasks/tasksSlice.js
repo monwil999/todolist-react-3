@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { getTasksInLocalStorage } from './tasksLocalStorage';
+import { createSlice } from "@reduxjs/toolkit";
+import { getTasksInLocalStorage } from "./tasksLocalStorage";
 
 const tasksSlice = createSlice({
-  name: 'tasks',
+  name: "tasks",
   initialState: {
     tasks: getTasksInLocalStorage() || [],
     hideDone: false,
@@ -60,11 +60,11 @@ export const selectTasksByQuery = (state, query) => {
   const tasks = selectTasks(state);
 
   if (!query || query.trim() === "") {
-     return tasks;
+    return tasks;
   }
 
- return tasks.filter(({ content }) =>
-    content.toUpperCase().includes(query.trim().toUpperCase()));
-  }
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.trim().toUpperCase())
+  );
+};
 export default tasksSlice.reducer;
-
