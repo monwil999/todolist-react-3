@@ -13,6 +13,7 @@ export const Item = styled.li`
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    color: teal;
 
     ${({ hidden }) => hidden && css`
         display: none;
@@ -20,7 +21,7 @@ export const Item = styled.li`
 `;
 
 export const Content = styled.span`
-    ${({ done }) => done && css` 
+    ${({ done }) => done && css`
         text-decoration: line-through;
     `}
 `;
@@ -31,20 +32,22 @@ export const Button = styled.button`
     width: 30px;
     height: 30px;
     padding: 0;
+    color: teal;
 
-    ${({ toggleDone }) => toggleDone && css`
+    ${({ $toggleDone }) => $toggleDone && css`
         background: green;
-
-        &:hover {
-            background: lightgreen;
-        }
+        color: white;  // Kolor "✓" na biały
     `}
-
+    
     ${({ remove }) => remove && css`
         background: red;
-
         &:hover {
             background: rgb(193, 89, 89);
         }
+    `}
+    
+    ${({ done }) => done && css`
+        background: green;
+        color: white;  // Kolor "✓" na biały
     `}
 `;
