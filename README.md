@@ -9,7 +9,7 @@
 **Simple list that will help you with your daily duties.**
 
 
-![Todolist](todolistreact.png)
+![Todolist](todolist.56.34.png)
 
 ## Features
 
@@ -20,6 +20,13 @@
 1. Java Script (ES6+)
 1. Styled-components
 1. Create React App
+1. JSX
+1. React Hooks
+1. Redux Toolkits
+1. Immer library
+1. Redux-Saga
+1. React-Router
+
 
 
 ## Available Scripts
